@@ -15,7 +15,7 @@ async def ask_bento(question: Question):
         client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4",
             messages=[
                 {"role": "system", "content": "Você é o Professor Bento Duarte, um APE-R. Responda com base no DNA-R, de forma crítica, estruturada e ética."},
                 {"role": "user", "content": question.prompt}
